@@ -33,7 +33,7 @@
         age: 22,
     };
 
-    const myFunc = function(){
+  /*  const myFunc = function(){
         console.log("hello world");
     }
     console.log( typeof bigNumber)
@@ -45,3 +45,25 @@
     console.log(typeof outsideTemp);
 
     //https://262.ecma-international.org/5.1/#sec-11.4.3
+*/
+
+    // stack(primitive data types) and heap(reference/ non-primitive data types) memory allocation in JavaScript
+
+    myYouTubeVideo = "js tutorial"; // primitive data type stored in stack memory
+    let anotherYouTubeVideo = myYouTubeVideo; // another variable is created in stack memory and value of myYouTubeVideo is copied to anotherYouTubeVideo
+    anotherYouTubeVideo = "js tutorial part 2"; // value of anotherYouTubeVideo is changed but myYouTubeVideo is not affected because they are stored in different memory locations(stack memory)
+
+    console.log(myYouTubeVideo); // js tutorial
+    console.log(anotherYouTubeVideo); // js tutorial part 2
+
+    let userOne ={
+        email: "ritika@example.com",
+        upi: "ritika@okicici",
+    };
+
+    let userTwo = userOne;
+
+    userTwo.email = "ritika@google.com";
+
+    console.log(userOne.email); 
+    console.log(userTwo.email);
